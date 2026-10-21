@@ -1,0 +1,17 @@
+name: Portable tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build-ci -DASC_BUILD_TESTS=ON -DASC_BUILD_ASI=OFF -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build-ci --parallel 2
+      - name: Test
+        run: ctest --test-dir build-ci --output-on-failure

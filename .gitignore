@@ -1,0 +1,36 @@
+# Locally installed/build dependencies
+.deps/
+build-vs2026-win32/
+dist/
+_local-test/
+build-host/
+build-sanitized/
+build-vs2026-x64/
+build-review-*/
+
+# Generated files and local state
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Testing/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.log
+*.tmp
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
